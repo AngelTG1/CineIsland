@@ -2,9 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import Presen from '../../assets/images/mobileTv.png'
 import Navbar from '../molecules/Navbar.jsx'
-
+import { useNavigate } from 'react-router-dom'
 
 function LandingPages() {
+    const navigate=useNavigate();
+    const handlerClick = () => {
+        navigate("/login")
+    };
   return (
     <>
         <Navbar/>
@@ -14,7 +18,7 @@ function LandingPages() {
                 <h1>Películas y series <br/> ilimitadas y mucho más</h1>
                 <p>Disfruta donde quieras con CineIsland.</p>
                 <div>
-                    <button>COMENZAR</button>
+                    <button onClick={handlerClick}>COMENZAR</button>
                 </div>
             </div>
 
